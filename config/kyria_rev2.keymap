@@ -8,24 +8,42 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-	keymap {
-		compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  TAB  |  Q  |  W  |  F   |  P     |  B   |                                            |  J   |  L    |  U    |  Y   |   :   |   [  |
-// |  ESC  |  A  |  R  |  S   |  T     |  G   |                                            |  M   |  N    |  E    |  I   |   O   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  D     |  V   | L SHIFT | L SHIFT |    | L SHIFT | L SHIFT |  K   |  H    |  ,    |  .   |   /   | R SHIFT |
-//                     | GUI  | LCTRL  | GUI  |  SPACE  |   ESC   |    |   RET   |  SPACE  | BSPC | TAB   | R-ALT |
+        default_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |  TAB  |  Q  |  W  |  F   |  P     |  B   |                                            |  J   |  L    |  U    |  Y   |   :   |   [  |
+            // |  ESC  |  A  |  R  |  S   |  T     |  G   |                                            |  M   |  N    |  E    |  I   |   O   |   '  |
+            // | SHIFT |  Z  |  X  |  C   |  D     |  V   | L SHIFT | L SHIFT |    | L SHIFT | L SHIFT |  K   |  H    |  ,    |  .   |   /   | R SHIFT |
+            //                     | GUI  | LCTRL  | GUI  |  SPACE  |   ESC   |    |   RET   |  SPACE  | BSPC | TAB   | R-ALT |
 
-			bindings = <
-	&kp TAB   &kp Q &kp W    &kp F &kp P &kp B                                                &kp J    &kp L     &kp U     &kp Y   &kp SEMI &kp BSLH
-	&kp ESC   &kp A &kp R    &kp S &kp T &kp G                                                &kp M    &kp N     &kp E     &kp I   &kp O    &kp SQT
-	&kp LSHFT &kp Z &kp X    &kp C &kp D &kp V &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp K    &kp H     &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-	                &kp LGUI &kp LCTRL &kp RET &kp SPACE &kp ESC          &kp RET   &kp SPACE &kp BSPC &kp RALT  &kp RALT
-			>;
+            bindings = <
+   &kp TAB   &kp Q   &kp W   &kp F      &kp P     &kp B                                                       &kp J      &kp L      &kp U    &kp Y  &kp SEMI   &kp BSLH
+   &kp ESC   &kp A   &kp R   &kp S      &kp T     &kp G                                                       &kp M      &kp N      &kp E    &kp I     &kp O    &kp SQT
+ &kp LSHFT   &kp Z   &kp X   &kp C      &kp D     &kp V    &kp LSHFT      &kp LSHFT  &kp LSHFT  &kp LSHFT     &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                             &none  &kp LCTRL  &kp LALT  &lt 1 SPACE  &kp RIGHT_GUI    &kp RET  &kp SPACE  &kp BSPC  &lt 2 DEL      &none
+            >;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
-	};
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        Layer__1 {
+            bindings = <
+  &none   &none   &none   &none   &none   &none                                            &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9   &none   &none
+  &none   &none   &none   &none   &none   &none                                            &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none            &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3   &none   &none
+                          &none   &none   &none   &none   &none   &none   &none  &kp KP_NUMBER_0            &none            &none
+            >;
+        };
+
+        Layer__2 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+    };
 };
