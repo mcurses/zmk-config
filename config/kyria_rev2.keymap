@@ -40,7 +40,7 @@
         Symbols {
             bindings = <
 &trans  &trans       &trans  &kp AMPERSAND   &kp HASH  &trans                                    &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans    &trans  &trans
-&trans  &trans  &kp PERCENT     &kp DOLLAR  &kp TILDE  &trans                                  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp PIPE  &trans
+&trans  &kp EXCL     &kp PERCENT     &kp DOLLAR  &kp TILDE  &trans                                  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp PIPE  &trans
 &trans  &trans       &trans         &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp LESS_THAN       &kp GREATER_THAN  &trans    &trans  &trans
                                     &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans                &trans                 &trans
             >;
