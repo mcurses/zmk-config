@@ -6,6 +6,9 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#define DEFAULT 0
+#define NUM   1
+#define SYM   2
 
 / {
     keymap {
@@ -25,7 +28,7 @@
                              &none  &kp LCTRL &kp LALT &lt 1 SPACE   &lt 2 RIGHT_GUI    &kp RET  &kp SPACE  &kp BSPC  &kp RIGHT_GUI   &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Numbers {
